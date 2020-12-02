@@ -27,6 +27,10 @@ h1 {
     padding-left: 20px;
     padding-right: 30px;
 }
+#grid #article ol{
+    border-right: none;
+    padding-top: 0;
+}
 /*screen width < 700px*/
 @media(max-width:700px){
     #grid{
