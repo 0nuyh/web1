@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Object</h1>
+        <h2>Create</h2>
+        <script>
+            var coworkers = {
+                "programmer":"lee", 
+                "designer":"hyun"
+            };
+            document.write("programmer: "+coworkers.programmer+"<br>");
+            document.write("designer: "+coworkers.designer+"<br>");
+            //정보추가
+            coworkers.bookkeeper = "young";
+            document.write("bookkeeper: "+coworkers.bookkeeper+"<br>");
+            //이름에 공백 넣고 싶을 때
+            coworkers["data scientist"] = "zzang";
+            document.write("data scientist: "+coworkers["data scientist"]+"<br>");
+        </script>
+        <h2>Iterate</h2>
+        <script>
+            //coworkers 객체에 있는 key 값들을 가져오는 반복문
+            for (var key in coworkers) {
+                document.write(key+'<br>');
+            }
+            for (var key in coworkers) {
+                document.write(coworkers[key]+'<br>');
+            }
+            for (var key in coworkers) {
+                document.write(key+' : '+coworkers[key]+'<br>');
+            }
+        </script>
+        <h2>Property & Method</h2>
+        <script>
+            // function showAll(){} 랑 똑같음
+            coworkers.showAll = function(){
+                for (var key in this) {
+                document.write(key+' : '+this[key]+'<br>');
+                }
+            }
+            coworkers.showAll();
+        </script>
+    </body>    
+</html>
